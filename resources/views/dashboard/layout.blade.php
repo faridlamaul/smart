@@ -218,7 +218,7 @@
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="{{ url('/images/logo.png') }}" alt="">
+                    <img src="{{ url('dashboard') }}" alt="">
                 </div>
                 <div class="sidebar-brand-text mx-3" style="font-size: 15px">Admin <b>SMART</b>
                 </div>
@@ -226,13 +226,13 @@
 
             <hr class="sidebar-divider my-0">
 
-            <li class="{{ Request::is('dashboard/home') ? 'nav-item active' : 'nav-item' }}">
-                <a class="nav-link" href="{{ url('dashboard') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
             @if (Auth::user()->hasRole('admin') || Auth::user()->hasRole('penguji'))
+                <li class="{{ Request::is('dashboard/home') ? 'nav-item active' : 'nav-item' }}">
+                    <a class="nav-link" href="{{ url('dashboard') }}">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span></a>
+                </li>
+
                 <li
                     class="{{ Request::is('dashboard/form') || Request::is('dashboard/data') ? 'nav-item active' : 'nav-item' }}">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"

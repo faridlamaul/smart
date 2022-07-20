@@ -224,7 +224,7 @@
             background-position-y: -730px;
             background-size: cover;
             background-repeat: no-repeat;
-            margin-bottom: 50px;
+            margin-bottom: 150px;
             ">
         <div class="masthead-content">
             <div class="container px-5">
